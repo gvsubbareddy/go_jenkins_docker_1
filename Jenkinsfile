@@ -6,6 +6,7 @@ pipeline {
   agent {
     dockerfile {
 		 filename 'Dockerfile'
+	         args '-v "$PWD":/usr/src/myapp -w /usr/src/myapp'
 		 reuseNode false
 	 }
   }

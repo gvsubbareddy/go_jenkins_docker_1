@@ -14,7 +14,7 @@ pipeline {
 	stage ('Building') {
       steps {
         sh '''
-        docker run -it --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp --name my-running-app my-golang-app
+        docker run -i --rm -v "$PWD":/usr/src/myapp -w /usr/src/myapp --name my-running-app my-golang-app
         '''
       }
     }
